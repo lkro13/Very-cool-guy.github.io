@@ -1,0 +1,117 @@
+h1 {
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;
+    font-family: 'Comic Sans MS', 'Trebuchet MS', sans-serif;
+    font-size: 3rem;
+    margin-top: 1rem;
+}
+
+#score-board {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: yellow;
+    text-shadow: 2px 2px 0 #000;
+    margin: 1rem;
+    font-family: 'Courier New', monospace;
+}
+
+#per-click {
+    text-align: center;
+    font-size: 1.2rem;
+    color: white;
+    text-shadow: 1px 1px 0 #000;
+    margin-bottom: 1rem;
+}
+
+#cat-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+    user-select: none;
+}
+
+#stupidcat {
+    width: 400px;
+    height: auto;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-drag: none;
+    transition: transform 0.06s ease-out;
+    border: 6px solid #A30262;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+#stupidcat:active {
+    transform: scale(0.92) rotate(-3deg);
+}
+
+.float-point {
+    position: absolute;
+    color: yellow;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 0 #000;
+    pointer-events: none;
+    animation: floatUp 0.9s ease-out forwards;
+    font-family: 'Comic Sans MS', sans-serif;
+    z-index: 9999;
+}
+
+@keyframes floatUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-80px) scale(1.5);
+    }
+}
+
+#upgrades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 2rem auto;
+    max-width: 500px;
+}
+
+.upgrade, #reset {
+    width: 100%;
+    padding: 12px;
+    background-color: #bb5994;
+    color: white;
+    border: 4px groove white;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.upgrade:hover {
+    background-color: #d369ad;
+}
+
+.upgrade:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+#reset {
+    background-color: #8B0000;
+    margin-top: 1rem;
+}
+
+#reset:hover {
+    background-color: #b00000;
+}
+
+.cost {
+    color: #FFED00;
+}

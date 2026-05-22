@@ -10,6 +10,7 @@ const Radius = 2;
 const MaxVelocity = 2;
 const LinienAbstand = 100;
 const MouseEffectRadius = 200;
+const MouseEffectMaximaleStaerke = 4;
 const LinienLimit = Infinity;
 const MouseVeranstaltung = true;
 const ColorPallet = [
@@ -88,7 +89,19 @@ function ForceField(XBall, YBall, X2, Y2) {
         X: XBall - X2,
         Y: YBall - Y2
     }
-    VectorLaenge = map_range(VectorLaenge, 0, MouseEffectRadius, 1, .001);
+    // normalize your damn vectors dog
+    Total.X /= VectorLaenge;
+    Total.Y /= VectorLaenge;
+
+    //VectorLaenge = map_range(VectorLaenge, 0, MouseEffectRadius, MouseEffectMaximaleStaerke, .001);
+
+    // alternative Power Curve Falloff cus I like it much more than the linear one above
+    // PushStrength = (1 - x)^z | https://www.desmos.com/calculator/gvjukpsejz
+    const Falloff = 0.4
+    let x = VectorLaenge / MouseEffectRadius;
+    VectorLaenge = Math.pow(1 - x, Falloff) * MouseEffectMaximaleStaerke;
+
+    // i have no clue why we're truncating to 3 digits but sure ig
     VectorLaenge *= 1000;
     VectorLaenge = Math.floor(VectorLaenge);
     VectorLaenge /= 1000;
@@ -162,8 +175,11 @@ function Particle(StartX, StartY, Radius, VelocityX, VelocityY, I, Color, LineAr
 
         if (Abstand(MousePos.X, MousePos.Y, this.X, this.Y) < MouseEffectRadius && MouseVeranstaltung == true) {
             let Force = ForceField(this.X, this.Y, MousePos.X, MousePos.Y)
-            this.ValX = Force.X;
-            this.ValY = Force.Y;
+            // why wouldn't this be additive, I prefer when the dots don't just get stuck to the forcefield
+            // this.ValX = Force.X;
+            // this.ValY = Force.Y;
+            this.ValX = this.StartValX + Force.X;
+            this.ValY = this.StartValY + Force.Y;
         } else {
             this.ValX = this.StartValX;
             this.ValY = this.StartValY;
