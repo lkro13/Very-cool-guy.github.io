@@ -4,13 +4,27 @@
     <meta charset="utf-8">
     <title>title</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/licensepopup.css">
     <link rel="stylesheet" href="styles/chat.css">
 	  <link rel="icon" type="image/png" href="resources/gay.png"/>
+    <script src="script.js"></script>
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+    <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.js"></script>
+  </head>
+  <body>
+    <!-- yes hello this is cracktorio, niko will be rotating. Do not kill her pls 😢-->
+    <canvas id="niko-canvas"></canvas>
+    <link rel="stylesheet" href="styles/niko.css">
+    <script src="scripts/niko.js"></script>
+    <!-- this is where niko code ends, thank you!!!-->
+
     <script src="scripts/script.js"></script>
 	  <script src="scripts/background.js" defer=""></script>
+    <script src="scripts/clicker.js"></script>
   </head>
   <body>
   <canvas id="CAN" style="position: fixed; width: 100vw; height: 100vh; z-index: -2"></canvas>
+  <header>
     <a href="randomassart.html">Random Art</a>
     <a href="randomassgifs.html">Random Gifs</a>
     <a href="DnD/DnDcreator.html">Character creator 9000</a>
@@ -18,7 +32,12 @@
   	<a href="lowkirkenuinely.html">Shrine of Kirk</a>
     <a href="the_shrine.html">🇦🇹🇭🇺 Austria-Hungary Chan Shrine 🇭🇺🇦🇹</a>
 	  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">say hi to reddit!</a>
-    <a href="subsite/subsitenav.html">SUbsite</a>
+    <a href="subsite/subsitenav.html">Gallery</a>
+    <a href="movies.html">WATCH MOVIES 4 FREE</a>
+    <a href="doom-wasm/index.html" style="font-size:2rem">DOOM!</a>
+    <a href="stupidcat.html">Stupid Cat Clicker</a>
+  </header>
+    
     <marquee>
     <p>The missile knows where it is at all times. It knows this because it knows where it isn't. By subtracting where it is from where it isn't, or where it isn't from where it is (whichever is greater), it obtains a difference, or deviation. The guidance subsystem uses deviations to generate corrective commands to drive the missile from a position where it is to a position where it isn't, and arriving at a position where it wasn't, it now is. Consequently, the position where it is, is now the position that it wasn't, and it follows that the position that it was, is now the position that it isn't. In the event that the position that it is in is not the position that it wasn't, the system has acquired a variation, the variation being the difference between where the missile is, and where it wasn't. If variation is considered to be a significant factor, it too may be corrected by the GEA. However, the missile must also know where it was. The missile guidance computer scenario works as follows. Because a variation has modified some of the information the missile has obtained, it is not sure just where it is. However, it is sure where it isn't, within reason, and it knows where it was. It now subtracts where it should be from where it wasn't, or vice-versa, and by differentiating this from the algebraic sum of where it shouldn't be, and where it was, it is able to obtain the deviation and its variation, which is called error.</p>
     </marquee>
@@ -32,11 +51,7 @@
     <iframe width="420" height="315"
       src="https://www.youtube.com/embed/yvZP3YQNuRo?autoplay=1&mute=1&loop=1&playlist=yvZP3YQNuRo">
     </iframe>
-    
-    <div>
-      <img src="resources/homepage-gif.gif" alt="Homepage gif">
-    </div>
-    
+
     <h1>PLAY MY CARD IS BETTER THAN YOUR CARD!!!</h1>
     <img src="resources/capsule_616xa353.jpg">
 
@@ -51,7 +66,7 @@
     <p>^^ Cool roguelite tower defense game, fight ghosts with desserts and drinks through a haunted mansion, hand drawn by me comes out early access for Halloween :D</p>
 
     <p>pls pls pls pls pls pls pls - Himejoshiheart</p>
-    
+
     <p>-</p>
     <p>hi</p>
     <p>when the light is running low and the shadows start to grow and the places that you know seem like fantasy theres a light inside your soul thats still shining in the cold with the truth the promise in your heart dont forget im with you in the dark</p>
@@ -109,6 +124,13 @@
     <img src="resources/1984boys.gif" alt="boyshehe">
     </marquee>
 
+    <!-- PING PONG BOTS WINDOW -->
+    <div style="text-align: center; margin: 20px auto; width: 440px; padding: 15px; border: 3px solid #444; background: #111; color: #0f0; border-radius: 12px; box-shadow: 0 0 15px rgba(0,255,0,0.2); font-family: monospace;">
+      <h3 style="margin: 0 0 10px 0; letter-spacing: 2px;">🤖 BOT PONG 🤖</h3>
+      <canvas id="pong" width="400" height="200" style="border: 2px solid #0f0; background: #000; display: block; margin: 0 auto; box-shadow: inset 0 0 10px #0f0;"></canvas>
+      <p style="margin: 10px 0 0 0; font-size: 12px; color: #888;">Infinite Rally Mode</p>
+    </div>
+
     <details>
       <summary>plot of the <i>Transformers</i> final battle:</summary>
       Galvatron gloats to the Autobots that with the power of Fortress Maximus he is unstoppable. As they hang helpless in the air, he first shocks and then drops them all to the ground. Side Burn drags himself to the edge of a huge crater, at the bottom of which Optimus Prime lays battered. As Optimus struggles up, Scourge and Ruination burst through the crater wall and open fire on the Autobot leader. Sky-Byte and the Predacon trio peer cautiously out of the hole as well, worrying what Galvatron will do to them if he spots them. Unfortunately for them, Galvatron already has spotted them, and orders them to attack the Autobots. Figuring that Galvatron will always be the scarier of the two options, the four Predacons get ready to fight, and are promptly trampled by the oncoming forces.
@@ -143,11 +165,12 @@
     <iframe width="720" height="415"
       src="https://www.youtube.com/embed/xHtQCvh7GdQ">
     </iframe>
-    
+
     <p>i'm sorry i don't watch transformers i just pasted the wiki</p>
 
     <div id="chat-button">💬</div>
-<div id="chat-widget">
+
+  <div id="chat-widget">
   <div id="chat-header">Chat Noir</div>
 
   <div id="chat-messages">
@@ -165,7 +188,7 @@
     <div>
 <iframe width="5" height="5" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
-   
+
       <div style="font-size: 2em; font-weight: 700;">
         <span style="vertical-align: middle;">sponsored by <a href="https://mypayindia.com">MyPayIndia</a> - the Future of Online Banking</span>
         <a href="https://mypayindia.com">
@@ -173,11 +196,13 @@
         </a>
       </div>
 
-	      
+
   <p>
     happy birthday Nyun D. Hanayagi
   </p>
-  
+	  
+  <script src="scripts/pong.js"></script>
+	  
   <div>
     <img src="resources/leon_be_like.png" alt="Leon_be_like">
     <br>
@@ -188,12 +213,22 @@
         happy birthday Nyun D. Hanayagi
       </p>
 
+      <p id="myImg" src="resources/bottomlicense.png" style="color:white;">get a bottom license!!</p>
+
+      <div id="myModal" class="modal">
+      	<span class="close">&times;</span>
+      	<img class="modal-content" id="img01">
+      	<div id="caption"></div>
+      </div>
+    <script src="scripts/bottom.js"></script>
+	  
 	<p>ancient mesopotamian brainrot</p>
 	<video width="900" height="600" controls>
 		<source src="resources/ancient-brainrot.mp4" type="video/mp4">
 	</video>
+	  
       <p>Fun Herpetology Facts from Hazah
-        
+
         1.The Texas Horned lizard can shoot blood out of its eyes as a self defense mechanism.
 2.The Bilbos Rain Frog, otherwise known as the Breviceps bagginsi, is named after the character Bilbo Baggins from J.R.R Tolkiens the hobbit.
 3.The suriname toad gives birth from its back.
@@ -210,13 +245,18 @@
 
     <p>"Why couldn't Augustus Caesar be found in his house? <br> Because...he's Roman!"</p> <!-- added for my friend :D-->
   </div>
-    
+
 	  <img src="resources/groundhog.gif" alt="how much dih">
 
 	  <div style="background-color: black; border: white 5px solid; color: white; padding: 10px; width: 70%">
         <span>This <strong style="color: yellow;">footer</strong> is <strong style="color: yellow;">pissing</strong> me off<br/>I am the original⠀⠀⠀⠀⠀⠀⠀⠀<strong style="color: yellow;">starwalker</strong></span><br/>
         <img src="resources/Starwalker_overworld.png" alt="starwalker"/>
       </div>
+
+  <p>Hewwo! :3</p>
+  <p>Please be patient with me</p>
+  <img src="resources/polish-patriots-check-post-sprawdzony-przez-polskich-patriotów.png" alt=":3">
+	  
   <a href="secret.html">?</a>
   </body>
 </html>
