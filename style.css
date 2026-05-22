@@ -48,15 +48,10 @@ css.image-container {
 /* the annoying chat that wont leave you alone. Just be happy it doesnt pop up the moment the page loads */
 /* made with an incredible amount of hate by @ottersmeep */
 
-#chat-root {
-  all: initial; /* if your reading this your gay */
-  font-family: sans-serif; /* but not as gay as me */
-}
-
-#chat-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
+#chat-button { /*if you read this ur gay */
+  position: fixed; /* i dont make the rules */
+  bottom: 20px; /* well i do but still */
+  right: 20px; /* ykwim */
   width: 55px;
   height: 55px;
   border-radius: 50%;
